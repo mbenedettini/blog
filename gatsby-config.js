@@ -1,33 +1,29 @@
 module.exports = {
   siteMetadata: {
-    title: `Novela by Narative`,
-    name: `Narative`,
-    siteUrl: `https://novela.narative.co`,
-    description: `This is my description that will be used in the meta tags and important for search results`,
+    title: `marianobe`,
+    name: `Unix. What else?`,
+    siteUrl: `https://marianobe.com`,
+    description: `Blah blah blah`,
     hero: {
-      heading: `Welcome to Novela, the simplest way to start publishing with Gatsby.`,
+      heading: `Adventures in the land of Software Engineering, DevOps, and more.`,
       maxWidth: 652,
     },
     social: [
       {
         name: `twitter`,
-        url: `https://twitter.com/narative`,
+        url: `https://twitter.com/marianobe`,
       },
       {
         name: `github`,
-        url: `https://github.com/narative`,
+        url: `https://github.com/mbenedettini`,
       },
-      {
-        name: `instagram`,
-        url: `https://instagram.com/narative.co`,
-      },
+      // {
+      //   name: `instagram`,
+      //   url: `https://instagram.com/narative.co`,
+      // },
       {
         name: `linkedin`,
-        url: `https://www.linkedin.com/company/narative/`,
-      },
-      {
-        name: `dribbble`,
-        url: `https://dribbble.com/narativestudio`,
+        url: `https://www.linkedin.com/in/marianobenedettini`,
       },
     ],
   },
@@ -62,5 +58,13 @@ module.exports = {
       options: {
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /content/
+        }
+      }
+    }
   ],
 };
