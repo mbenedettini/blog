@@ -2,17 +2,16 @@
 title: "PSI: Auto join groupchat at a certain time"
 author: Mariano Benedettini
 date: 2011-09-26
-hero: sarlanga
+hero: 
 excerpt: "PSI: Auto join groupchat at a certain time" 
 ---
 
-Above header
 
-## Headers
+In my job we have a daily chat that everyone must join at 10 AM. I'm using PSI as the
+xmpp client and that's easy to do from Psi command line interface with a cronjob:
 
-# H1
 
-It is recommended to NOT use H1s as it is reserved for the article heading. Any H1 is set as an H2.
+```
+59 9 * * 1,2,3,4,5 DISPLAY=:0.0 /usr/bin/psi --remote --uri=xmpp:daily@conference.mychatserver.com?join
 
-## H2
-
+```
