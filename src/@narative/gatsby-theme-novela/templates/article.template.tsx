@@ -115,7 +115,7 @@ const MobileControls = styled.div`
 
 const ArticleBody = styled.article`
   position: relative;
-  padding: 160px 0 35px;
+  padding: 0px 0 35px;
   padding-left: 68px;
   transition: background 0.2s linear;
 
