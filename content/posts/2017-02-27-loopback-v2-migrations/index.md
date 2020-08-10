@@ -1,7 +1,7 @@
 ---
 title: Postgres migrations in Loopback v2
 author: Mariano Benedettini
-date: 2017-02-28
+date: 2017-02-27
 hero: 
 excerpt: Painless migrations? Yes, it's possible. 
 ---
