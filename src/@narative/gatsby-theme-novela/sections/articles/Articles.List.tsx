@@ -108,12 +108,11 @@ const ListItem: React.FC<ArticlesListItemProps> = ({ article, narrow }) => {
           </ImageContainer>
         ) : (null)}
         <div>
-          <Title dark hasOverflow={hasOverflow} gridLayout={gridLayout}>
+          <Title dark gridLayout={gridLayout}>
             {article.title}
           </Title>
           <Excerpt
             narrow={narrow}
-            hasOverflow={hasOverflow}
             gridLayout={gridLayout}
           >
             {article.excerpt}
