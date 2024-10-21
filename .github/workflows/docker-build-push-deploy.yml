@@ -34,3 +34,11 @@ jobs:
         context: .
         push: true
         tags: ${{ vars.CLOUDFLARE_REGISTRY_URL }}/marianobe-site:${{ env.SHA }}
+
+    - name: Deploy
+      uses: peter-evans/repository-dispatch@v2
+      with:
+        event-type: deploy-marianobe-site
+        token: ${{ secrets.FLUX_BOT_TOKEN }}
+        repository: mbenedettini/hetzner-k3s-cluster
+        client-payload: '{"sha": "${{ env.SHA }}"}'
