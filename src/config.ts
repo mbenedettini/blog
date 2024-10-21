@@ -1,16 +1,16 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://marianobe.cc/", // replace this with your deployed domain
+  website: "https://marianobe.cc/",
   author: "Mariano Benedettini",
   profile: "https://marianobe.cc/",
   desc: "Personal website of Mariano Benedettini",
   title: "marianobe",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "marianobe-og.png",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 6,
-  scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
+  scheduledPostMargin: 15 * 60 * 1000,
 };
 
 export const LOCALE = {
