@@ -41,4 +41,7 @@ export default defineConfig({
   experimental: {
     contentLayer: true,
   },
+  server: {
+    port: 4000,
+  },
 });
