@@ -1,5 +1,5 @@
 ---
-title: Inexpensive Kubernetes cluster on Hetzner Cloud Servers
+title: Inexpensive Kubernetes cluster on Hetzner Cloud Servers, with Istio and FluxCD
 author: Mariano Benedettini
 pubDatetime: 2024-10-21
 hero: ../../assets/images/k9s.png
