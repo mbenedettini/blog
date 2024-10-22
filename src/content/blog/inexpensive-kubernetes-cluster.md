@@ -7,8 +7,9 @@ description: A K3S cluster on Hetzner Cloud Servers using Terraform, K3S and Flu
 tags:
   - kubernetes
   - terraform
-  - k3s
+  - "k3s"
   - fluxcd
+  - istio
 ---
 
 Recently I decided that it was time to have my own personal Kubernetes cluster
