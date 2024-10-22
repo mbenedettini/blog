@@ -205,6 +205,9 @@ workflow that is triggered from the blog repo in the
 [`build-push-deploy`](https://github.com/mbenedettini/blog/blob/master/.github/workflows/docker-build-push-deploy.yml#L38)
 job, using an action that dispatches workflows from another repository.
 
+Every time I commit or merge a PR into master the site gets automatically built
+and deployed.
+
 Due to Github security restrictions a Token with the right permissions (r/w to
 the Cluster repo) is needed in both repos, the origin (to trigger the deploy
 action on the cluster repo) and the target one (to push the commit containing
