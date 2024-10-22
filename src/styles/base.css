@@ -115,6 +115,10 @@
     font-weight: var(--shiki-dark-font-weight) !important;
     text-decoration: var(--shiki-dark-text-decoration) !important;
   }
+
+  h1, h2, h3 {
+    @apply mt-16 !important;
+  }
 }
 
 @layer components {

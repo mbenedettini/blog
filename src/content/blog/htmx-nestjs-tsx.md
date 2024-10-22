@@ -1,8 +1,8 @@
 ---
 title: HTMX + AlpineJS + NestJS + TSX boilerplate / to-do app
 author: Mariano Benedettini
-pubDatetime: 2024-10-21
-hero: 
+pubDatetime: 2024-10-11
+hero:
 description: A simple todo app built with HTMX + AlpineJS, NestJS and TSX server side rendering.
 tags:
   - htmx
@@ -11,8 +11,6 @@ tags:
   - tsx
   - typescript
 ---
-
-# Introduction
 
 Given the hype that [HTMX](https://htmx.org/) has been experiencing lately, I
 thought I'd give it a try and build a simple todo app using it.
