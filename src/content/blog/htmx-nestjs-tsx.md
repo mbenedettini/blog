@@ -21,6 +21,9 @@ and recently I became more into it thanks to the
 [Execute Program](https://www.executeprogram.com/courses/everyday-typescript)
 courses.
 
+You can find the complete codebase on
+https://github.com/mbenedettini/nestjs-tsx-htmx-todo-app.
+
 ## Tech decisions
 
 ### Why HTMX?
