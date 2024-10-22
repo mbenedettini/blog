@@ -14,7 +14,7 @@ COPY . .
 RUN nix build --impure --print-build-logs
 
 # Stage 2: Serve the static site
-FROM nginx:alpine
+FROM nginx:1.27.2-alpine
 
 # Copy the built assets from the Nix build
 COPY --from=builder /build/result/dist /usr/share/nginx/html
