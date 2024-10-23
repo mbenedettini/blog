@@ -24,7 +24,7 @@ courses.
 You can find the complete codebase on
 https://github.com/mbenedettini/nestjs-tsx-htmx-todo-app.
 
-## Tech decisions
+## The stack
 
 ### Why HTMX?
 
@@ -141,8 +141,30 @@ export class TodosController {
 }
 ```
 
-The other end of this approach is a few lines in the
+I also wanted to automatically detect HTMX requests and use a different layout
+for them:
+
+```typescript title="src/main.ts"
+if (Boolean(request.headers["hx-request"])) {
+  defaultLayout = "layouts/partial";
+}
+```
+
+What was only missing is a few lines in the
 [NestJS main file](https://github.com/mbenedettini/nestjs-tsx-htmx-todo-app/blob/main/src/main.ts#L17)
 to hook up the adapter. Note that we are using `.js` as extension since NestJS
 expects transpiled modules but you can use `.tsx` if you are using `ts-node` or
 `tsx` to run the application.
+
+```typescript
+const viewsDirectory = join(__dirname, "views");
+app.setBaseViewsDir(viewsDirectory);
+app.engine(
+  "js",
+  KitaViews({
+    viewsDirectory,
+  }),
+);
+app.set("view engine", "js");
+app.set("views", viewsDirectory);
+```
