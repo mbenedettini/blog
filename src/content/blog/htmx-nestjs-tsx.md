@@ -1,5 +1,5 @@
 ---
-title: HTMX + AlpineJS + NestJS + TSX boilerplate / to-do app
+title: HTMX + AlpineJS, NestJS + TSX to-do app
 author: Mariano Benedettini
 pubDatetime: 2024-10-11
 hero:
@@ -20,6 +20,9 @@ ideally Typescript given that is the language I've been using the most lately
 and recently I became more into it thanks to the
 [Execute Program](https://www.executeprogram.com/courses/everyday-typescript)
 courses.
+
+I ended up using NestJS and I wrote a small adapter to use server-side TSX
+components with it and take full advantage of TypeScript.
 
 You can find the complete codebase on
 https://github.com/mbenedettini/nestjs-tsx-htmx-todo-app.
