@@ -34,6 +34,9 @@
             export HOME=$(mktemp -d)
             pnpm install --frozen-lockfile
             pnpm run build
+            mv dist/sitemap-index.xml dist/sitemap-index-new.xml
+            mv dist/sitemap-0.xml dist/sitemap-0-new.xml
+            sed -i 's/sitemap-0/sitemap-0-new/g' dist/sitemap-index-new.xml
           '';
 
           installPhase = ''
