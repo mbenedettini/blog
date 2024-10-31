@@ -136,9 +136,15 @@ const structuredData = {
     <ViewTransitions />
 
     <script is:inline src="/toggle-theme.js" async></script>
-    <PostHog />
   </head>
   <body>
     <slot />
+
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "b8a726e6c052413f907dc9911b08d085"}'
+    ></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>
