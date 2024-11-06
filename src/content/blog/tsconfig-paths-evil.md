@@ -3,7 +3,7 @@ title: TypeScript's paths option in tsconfig.json could be evil
 author: Mariano Benedettini
 pubDatetime: 2024-11-05
 hero: 
-description: Using TypeScript's paths could be problematic in some scenarios.
+description: Using TypeScript's paths option in tsconfig.json could be problematic in some scenarios.
 tags:
   - typescript
 ---
