@@ -19,6 +19,8 @@ FROM nginx:1.27.2-alpine
 # Copy the built assets from the Nix build
 COPY --from=builder /build/result/dist /usr/share/nginx/html
 
+RUN find /usr/share/nginx/html -exec touch {} +
+
 # Add Nginx configuration
 RUN echo "server { \
     listen       80; \
