@@ -40,6 +40,25 @@ but we don't want all of them to be brought into every local development
 environment, therefore only secrets with tag `dev-env=1` will be automatically
 pulled into environment variables.
 
+The gist of this is a loop over all secrets that then puts them into
+`.envrc-secrets`, which is sourced right away:
+
+```bash
+# Fetch secrets and process them with jq
+aws secretsmanager list-secrets --filters Key="tag-key",Values="dev-env" Key="tag-value",Values="1" | \
+  jq -r '.SecretList[] | .Name' | \
+while read secret_name; do
+    # Convert secret name to env var name (replace / with _ and uppercase)
+    env_var_name=$(echo "$secret_name" | tr '/' '_' | tr '[:lower:]' '[:upper:]')
+    
+    # Get secret value, extract .password field, and add it to .envrc-secrets
+    secret_value=$(aws secretsmanager get-secret-value --secret-id "$secret_name" --query 'SecretString' --output text | jq -r '.password')
+    echo "export ${env_var_name}='${secret_value}'" >> .envrc-secrets
+done
+
+source_env .envrc-secrets
+```
+
 Secret name will be converted into an environment variable name replacing `/`
 with `_` and making all letters upercase. For example secret `prod/db0/mariano`
 becomes env variable `PROD_DB0_MARIANO`.
