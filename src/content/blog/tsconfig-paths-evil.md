@@ -39,7 +39,7 @@ Even in a monorepo project you would have to have all your path aliases in a
 root `tsconfig.json` file, from which all workspaces import, for that to work
 flawlessly, which is far from ideal in a large codebase.
 
-<hr></hr>
+<hr class="my-16" />
 
 For my particular case I ended up using
 [tsc-alias](https://github.com/justkey007/tsc-alias) which works at build time

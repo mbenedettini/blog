@@ -129,10 +129,6 @@
   article > h3 {
     @apply mt-16 !important;
   }
-
-  hr {
-    @apply my-16 !important;
-  }
 }
 
 @layer components {
