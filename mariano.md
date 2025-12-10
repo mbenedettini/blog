@@ -1,3 +1,5 @@
+[comment]: <> (Generated with https://www.junian.dev/markdown-resume/)
+
 # MARIANO BENEDETTINI
 **SOFTWARE ENGINEER**  based in Argentina (UTC-3)
 
